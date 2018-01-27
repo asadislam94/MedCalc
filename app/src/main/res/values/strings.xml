@@ -9,7 +9,7 @@
     <string name="ecg">ECG</string>
     <string name="systolic_bp">Systolic BP</string>
     <string name="pulse_bpm">Pulse (bpm)</string>
-    <string name="haemoglobin_g_dl">Haemoglobin g/dl</string>
+    <string name="haemoglobin_g_dl">Haemoglobin (g/dl)</string>
     <string name="wbc">WBC</string>
     <string name="urea_mmol_l">Urea (mmol/l)</string>
     <string name="sodium_mmol_l">Sodium (mmol/l)</string>
