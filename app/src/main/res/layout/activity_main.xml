@@ -15,80 +15,411 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/agetextview"
+            <LinearLayout
+                android:id="@+id/possumresults"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_weight="0"
-                android:paddingEnd="2dp"
-                android:paddingStart="2dp"
-                android:text="@string/age" />
+                android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/agespinner"
+                <TextView
+                    android:id="@+id/PhysiologyScoretextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/physiology_score" />
+
+                <TextView
+                    android:id="@+id/OperSeverScoretextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/operative_severity_score" />
+
+                <TextView
+                    android:id="@+id/P-POSSUMtextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/p_possum_predicted_mortality" />
+
+                <TextView
+                    android:id="@+id/POSSUMtextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/possum_predicted_morbidity" />
+            </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_weight="0"
-                android:gravity="end"
-                android:soundEffectsEnabled="false"
-                android:textAlignment="viewEnd" />
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_below="@id/possumresults">
 
-            <TextView
-                android:id="@+id/cardiactextview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_weight="0"
-                android:paddingEnd="2dp"
-                android:paddingStart="2dp"
-                android:text="@string/cardiac_cxr" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:scrollbarAlwaysDrawHorizontalTrack="false">
 
-            <Spinner
-                android:id="@+id/cardiacSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_weight="0"
-                android:soundEffectsEnabled="false"
-                android:textAlignment="viewEnd" />
+                    <TextView
+                        android:id="@+id/agetextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/age" />
 
-            <TextView
-                android:id="@+id/Resptextview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_weight="0"
-                android:paddingEnd="2dp"
-                android:paddingStart="2dp"
-                android:text="@string/respiratory_cxr" />
+                    <Spinner
+                        android:id="@+id/agespinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:gravity="end"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
 
-            <Spinner
-                android:id="@+id/RespSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_weight="0"
-                android:soundEffectsEnabled="false"
-                android:textAlignment="viewEnd" />
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/cardiactextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/cardiac_cxr" />
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="?android:attr/windowBackground"
-            app:menu="@menu/navigation">
+                    <Spinner
+                        android:id="@+id/cardiacSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
 
-        </android.support.design.widget.BottomNavigationView>
+                    <TextView
+                        android:id="@+id/Resptextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/respiratory_cxr" />
+
+                    <Spinner
+                        android:id="@+id/RespSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/ECGtextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/ecg" />
+
+                    <Spinner
+                        android:id="@+id/ECGSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/SystolicBPtextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/systolic_bp" />
+
+                    <Spinner
+                        android:id="@+id/SystolicBPspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/Pulsetextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/pulse_bpm" />
+
+                    <Spinner
+                        android:id="@+id/Pulsespinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/Haemoglobintextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/haemoglobin_g_dl" />
+
+                    <Spinner
+                        android:id="@+id/Haemoglobinspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/wbctextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/wbc" />
+
+                    <Spinner
+                        android:id="@+id/wbcspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/ureatextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/urea_mmol_l" />
+
+                    <Spinner
+                        android:id="@+id/ureaspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/sodiumtextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/sodium_mmol_l" />
+
+                    <Spinner
+                        android:id="@+id/sodiumspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/potassiumtextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/potassium_mmol_l" />
+
+                    <Spinner
+                        android:id="@+id/potassiumspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/GCStextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/gcs" />
+
+                    <Spinner
+                        android:id="@+id/GCSspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/OpSevertextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/operative_severity_from_1991_paper" />
+
+                    <Spinner
+                        android:id="@+id/OpSeverspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/procedurestextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/number_of_precedures" />
+
+                    <Spinner
+                        android:id="@+id/proceduresspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/bloodlosstextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/operative_blood_loss_ml" />
+
+                    <Spinner
+                        android:id="@+id/bloodlossspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/peritonealtextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/peritoneal_soiling" />
+
+                    <Spinner
+                        android:id="@+id/peritonealspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/malignancytextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/malignasncy_status" />
+
+                    <Spinner
+                        android:id="@+id/malignancyspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+
+                    <TextView
+                        android:id="@+id/urgencytextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="0"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/urgency" />
+
+                    <Spinner
+                        android:id="@+id/urgencyspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="0"
+                        android:soundEffectsEnabled="false"
+                        android:textAlignment="viewEnd" />
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+        </RelativeLayout>
 
     </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation">
+
+    </android.support.design.widget.BottomNavigationView>
 
 </LinearLayout>

@@ -6,24 +6,395 @@
     <string name="age">Age</string>
     <string name="cardiac_cxr">Cardiac/CXR</string>
     <string name="respiratory_cxr">Respiratory/CXR</string>
+    <string name="ecg">ECG</string>
+    <string name="systolic_bp">Systolic BP</string>
+    <string name="pulse_bpm">Pulse (bpm)</string>
+    <string name="haemoglobin_g_dl">Haemoglobin g/dl</string>
+    <string name="wbc">WBC</string>
+    <string name="urea_mmol_l">Urea (mmol/l)</string>
+    <string name="sodium_mmol_l">Sodium (mmol/l)</string>
+    <string name="potassium_mmol_l">Potassium (mmol/l)</string>
+    <string name="gcs">GCS</string>
+    <string name="operative_severity_from_1991_paper">Operative Severity (from 1991 paper)</string>
+    <string name="number_of_precedures">Number of Precedures</string>
+    <string name="operative_blood_loss_ml">Operative Blood Loss (ml)</string>
+    <string name="peritoneal_soiling">Peritoneal Soiling</string>
+    <string name="malignasncy_status">Malignasncy Status</string>
+    <string name="urgency">Urgency</string>
+    <string name="textview">TextView</string>
+    <string name="physiology_score">Physiology Score:</string>
+    <string name="operative_severity_score">Operative Severity Score:</string>
+    <string name="possum_predicted_morbidity">POSSUM predicted morbidity:</string>
+    <string name="p_possum_predicted_mortality">P-POSSUM predicted mortality:</string>
 
-    <string-array name="Age_array">
-    <item>&lt;61</item>
-    <item>61-70</item>
-    <item>&gt;70</item>
-    </string-array>
 
-    <string-array name="Cardiac_array">
+    <!--AGE ARRAYS-->
+    <array name="Age_0">
+        <item>1</item>
+        <item>&lt;=60</item>
+    </array>
+    <array name="Age_1">
+        <item>2</item>
+        <item>61-70</item>
+    </array>
+    <array name="Age_2">
+        <item>4</item>
+        <item>&gt;=71</item>
+    </array>
+    <!--AGE ARRAYS-->
+
+    <!--Cardiac ARRAYS-->
+    <array name="Cardiac_0">
+        <item>1</item>
         <item>No Failure(Normal CXR)</item>
+    </array>
+    <array name="Cardiac_1">
+        <item>2</item>
         <item>Cardiac Meds, no cardiomegaly</item>
+    </array>
+    <array name="Cardiac_2">
+        <item>4</item>
         <item>Peripheral oedema,warfarin,borderline cardiomegaly</item>
+    </array>
+    <array name="Cardiac_3">
+        <item>8</item>
         <item>Raised JVP, cardiomegaly</item>
-    </string-array>
+    </array>
+    <!--Cardiac ARRAYS-->
 
-    <string-array name="Respiratory_array">
+    <!--Respiratory ARRAYS-->
+    <array name="Respiratory_0">
+        <item>1</item>
         <item>No Dyspnoea</item>
+    </array>
+    <array name="Respiratory_1">
+        <item>2</item>
         <item>Dyspnoea on exertion, Mild COAD</item>
+    </array>
+    <array name="Respiratory_2">
+        <item>4</item>
         <item>Limiting dyspnoea (one flight), moderate COAD</item>
+    </array>
+    <array name="Respiratory_3">
+        <item>8</item>
         <item>Dyspnoea at rest (rate > 30/min),fibrosis or consolidation</item>
-    </string-array>
+    </array>
+    <!--Respiratory ARRAYS-->
+
+    <!--ECG ARRAYS-->
+    <array name="ECG_0">
+        <item>1</item>
+        <item>Normal</item>
+    </array>
+    <array name="ECG_1">
+        <item>4</item>
+        <item>AF, rate 60-90</item>
+    </array>
+    <array name="ECG_2">
+        <item>8</item>
+        <item>Other aborm rhythm >4/min ectopics, Q wavaes, ST/T changes</item>
+    </array>
+    <!--ECG ARRAYS-->
+
+    <!--SystolicBP ARRAYS-->
+    <array name="SystolicBP_0">
+        <item>8</item>
+        <item>&lt;90</item>
+    </array>
+    <array name="SystolicBP_1">
+        <item>4</item>
+        <item>90-99</item>
+    </array>
+    <array name="SystolicBP_2">
+        <item>2</item>
+        <item>100-109</item>
+    </array>
+    <array name="SystolicBP_3">
+        <item>1</item>
+        <item>110-130</item>
+    </array>
+    <array name="SystolicBP_4">
+        <item>2</item>
+        <item>131-170</item>
+    </array>
+    <array name="SystolicBP_5">
+        <item>4</item>
+        <item>&gt;170</item>
+    </array>
+    <!--SystolicBP ARRAYS-->
+
+    <!--Pulse ARRAYS-->
+    <array name="Pulse_0">
+        <item>8</item>
+        <item>&lt;40</item>
+    </array>
+    <array name="Pulse_1">
+        <item>2</item>
+        <item>40-49</item>
+    </array>
+    <array name="Pulse_2">
+        <item>1</item>
+        <item>50-80</item>
+    </array>
+    <array name="Pulse_3">
+        <item>2</item>
+        <item>81-100</item>
+    </array>
+    <array name="Pulse_4">
+        <item>4</item>
+        <item>101-120</item>
+    </array>
+    <array name="Pulse_5">
+        <item>8</item>
+        <item>&gt;120</item>
+    </array>
+    <!--Pulse ARRAYS-->
+
+    <!--Haemoglobin ARRAYS-->
+    <array name="Haemoglobin_0">
+        <item>8</item>
+        <item>&lt;10</item>
+    </array>
+    <array name="Haemoglobin_1">
+        <item>4</item>
+        <item>10-11.4</item>
+    </array>
+    <array name="Haemoglobin_2">
+        <item>2</item>
+        <item>11.5-12.9</item>
+    </array>
+    <array name="Haemoglobin_3">
+        <item>1</item>
+        <item>13-16</item>
+    </array>
+    <array name="Haemoglobin_4">
+        <item>2</item>
+        <item>16.1-17.0</item>
+    </array>
+    <array name="Haemoglobin_5">
+        <item>4</item>
+        <item>17.1-18.0</item>
+    </array>
+    <array name="Haemoglobin_6">
+        <item>8</item>
+        <item>&gt;18.0</item>
+    </array>
+    <!--Haemoglobin ARRAYS-->
+
+    <!--WBC ARRAYS-->
+    <array name="wbc_0">
+        <item>4</item>
+        <item>&lt;3</item>
+    </array>
+    <array name="wbc_1">
+        <item>2</item>
+        <item>3.1-4</item>
+    </array>
+    <array name="wbc_2">
+        <item>1</item>
+        <item>4-10</item>
+    </array>
+    <array name="wbc_3">
+        <item>2</item>
+        <item>10.1-20</item>
+    </array>
+    <array name="wbc_4">
+        <item>4</item>
+        <item>&gt;20</item>
+    </array>
+    <!--WBC ARRAYS-->
+
+    <!--Urea ARRAYS-->
+    <array name="urea_0">
+        <item>1</item>
+        <item>&lt;7.6</item>
+    </array>
+    <array name="urea_1">
+        <item>2</item>
+        <item>7.6-10</item>
+    </array>
+    <array name="urea_2">
+        <item>4</item>
+        <item>10.1-15</item>
+    </array>
+    <array name="urea_3">
+        <item>8</item>
+        <item>&gt;15</item>
+    </array>
+    <!--Urea ARRAYS-->
+
+    <!--Sodium ARRAYS-->
+    <array name="sodium_0">
+        <item>8</item>
+        <item>&lt;126</item>
+    </array>
+    <array name="sodium_1">
+        <item>4</item>
+        <item>126-130</item>
+    </array>
+    <array name="sodium_2">
+        <item>2</item>
+        <item>131-135</item>
+    </array>
+    <array name="sodium_3">
+        <item>1</item>
+        <item>&gt;135</item>
+    </array>
+    <!--Sodium ARRAYS-->
+
+    <!--Potassium ARRAYS-->
+    <array name="potassium_0">
+        <item>8</item>
+        <item>&lt;2.9</item>
+    </array>
+    <array name="potassium_1">
+        <item>4</item>
+        <item>2.9-3.1</item>
+    </array>
+    <array name="potassium_2">
+        <item>2</item>
+        <item>3.2-3.4</item>
+    </array>
+    <array name="potassium_3">
+        <item>1</item>
+        <item>3.5-5</item>
+    </array>
+    <array name="potassium_4">
+        <item>2</item>
+        <item>5.1-5.3</item>
+    </array>
+    <array name="potassium_5">
+        <item>4</item>
+        <item>5.4-5.9</item>
+    </array>
+    <array name="potassium_6">
+        <item>8</item>
+        <item>&gt;5.9</item>
+    </array>
+    <!--Potassium ARRAYS-->
+
+    <!--GCS ARRAYS-->
+    <array name="GCS_0">
+        <item>8</item>
+        <item>&lt;9</item>
+    </array>
+    <array name="GCS_1">
+        <item>4</item>
+        <item>9-11</item>
+    </array>
+    <array name="GCS_2">
+        <item>2</item>
+        <item>12-14</item>
+    </array>
+    <array name="GCS_3">
+        <item>1</item>
+        <item>15</item>
+    </array>
+    <!--GCS ARRAYS-->
+
+    <!--OPSever ARRAYS-->
+    <array name="OPSever_0">
+        <item>1</item>
+        <item>Minor</item>
+    </array>
+    <array name="OPSever_1">
+        <item>2</item>
+        <item>Moderate (Appendicectomy, Chloecystectomy, Masttectomy, TURP)</item>
+    </array>
+    <array name="OPSever_2">
+        <item>4</item>
+        <item>Major (Any Laparotomy, Bowl Resection, Cholecystectomy with Choledochotomy, Peripheral Vascular or major Amputation)</item>
+    </array>
+    <array name="OPSever_3">
+        <item>8</item>
+        <item>Major+ (Any Aortic, Abdominoperitoneal Resection, Pancreatic or Liveer Resection, Oesophagogastrectomy)</item>
+    </array>
+    <!--OPSever ARRAYS-->
+
+    <!--Procedures ARRAYS-->
+    <array name="procedures_0">
+        <item>1</item>
+        <item>1</item>
+    </array>
+    <array name="procedures_1">
+        <item>4</item>
+        <item>2</item>
+    </array>
+    <array name="procedures_2">
+        <item>8</item>
+        <item>&gt;2</item>
+    </array>
+    <!--Procedures ARRAYS-->
+
+    <!--BloodLoss ARRAYS-->
+    <array name="bloodloss_0">
+        <item>1</item>
+        <item>&lt;100</item>
+    </array>
+    <array name="bloodloss_1">
+        <item>2</item>
+        <item>101-500</item>
+    </array>
+    <array name="bloodloss_2">
+        <item>4</item>
+        <item>501-999</item>
+    </array>
+    <array name="bloodloss_3">
+        <item>8</item>
+        <item>&gt;1000</item>
+    </array>
+    <!--BloodLoss ARRAYS-->
+
+    <!--Peritoneal ARRAYS-->
+    <array name="peritoneal_0">
+        <item>1</item>
+        <item>None</item>
+    </array>
+    <array name="peritoneal_1">
+        <item>2</item>
+        <item>Minor</item>
+    </array>
+    <array name="peritoneal_2">
+        <item>4</item>
+        <item>Local Pus</item>
+    </array>
+    <array name="peritoneal_3">
+        <item>8</item>
+        <item>Free bowel content, pus or blood</item>
+    </array>
+    <!--Peritoneal ARRAYS-->
+
+    <!--Malignancy ARRAYS-->
+    <array name="malignancy_0">
+        <item>1</item>
+        <item>None</item>
+    </array>
+    <array name="malignancy_1">
+        <item>2</item>
+        <item>Primary Only</item>
+    </array>
+    <array name="malignancy_2">
+        <item>4</item>
+        <item>nodal mets</item>
+    </array>
+    <array name="malignancy_3">
+        <item>8</item>
+        <item>distant mets</item>
+    </array>
+    <!--Malignancy ARRAYS-->
+
+    <!--Urgency ARRAYS-->
+    <array name="urgency_0">
+        <item>1</item>
+        <item>Elective</item>
+    </array>
+    <array name="urgency_1">
+        <item>4</item>
+        <item>2-24 hrs</item>
+    </array>
+    <array name="urgency_2">
+        <item>8</item>
+        <item>&lt;2 hrs</item>
+    </array>
+    <!--Urgency ARRAYS-->
 </resources>
